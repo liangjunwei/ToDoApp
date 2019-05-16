@@ -50,7 +50,6 @@ class TaskListTableViewController: UITableViewController {
         if taskStorage.taskArray[indexPath.row].check {
             cell.textLabel?.textColor = UIColor.green
         }
-        
         return cell
     }
     

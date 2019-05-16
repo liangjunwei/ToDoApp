@@ -19,28 +19,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3X0-ZG-APc">
-                                <rect key="frame" x="144" y="176" width="127" height="30"/>
+                                <rect key="frame" x="127" y="176" width="160" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="View My ToDo List"/>
                                 <connections>
                                     <segue destination="RwF-8V-lm7" kind="show" id="Cm3-jA-Fm1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btk-oF-giu">
-                                <rect key="frame" x="139" y="236" width="137" height="30"/>
+                                <rect key="frame" x="121" y="242" width="172" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Task To My List"/>
                                 <connections>
                                     <segue destination="cR0-nT-4C9" kind="presentation" id="uID-g9-UbN"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="btk-oF-giu" secondAttribute="trailing" constant="138" id="24w-rY-jNk"/>
-                            <constraint firstItem="3X0-ZG-APc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="RcS-my-e6W"/>
+                            <constraint firstItem="btk-oF-giu" firstAttribute="top" secondItem="3X0-ZG-APc" secondAttribute="bottom" constant="30" id="GIp-jn-Yos"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3X0-ZG-APc" secondAttribute="trailing" constant="127" id="R7z-Xl-rnm"/>
                             <constraint firstItem="3X0-ZG-APc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="Rmj-ny-RKz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3X0-ZG-APc" secondAttribute="trailing" constant="143" id="dzT-K1-gYX"/>
-                            <constraint firstItem="btk-oF-giu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="wtL-Fv-U2d"/>
-                            <constraint firstItem="btk-oF-giu" firstAttribute="top" secondItem="3X0-ZG-APc" secondAttribute="bottom" constant="30" id="x1F-nm-bDS"/>
+                            <constraint firstItem="3X0-ZG-APc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="127" id="Y2f-py-o6v"/>
+                            <constraint firstItem="btk-oF-giu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="dJc-z9-B26"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="btk-oF-giu" secondAttribute="trailing" constant="121" id="ebB-c7-uEI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -65,21 +67,22 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OW-EV-2Ip">
-                                <rect key="frame" x="176" y="214" width="63" height="30"/>
+                                <rect key="frame" x="165" y="214" width="84" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Task"/>
                                 <connections>
                                     <action selector="createTask:" destination="cR0-nT-4C9" eventType="touchUpInside" id="PUl-gT-Zkx"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6OW-EV-2Ip" firstAttribute="top" secondItem="7iO-IK-1xB" secondAttribute="bottom" constant="20" id="2Qz-th-PKn"/>
                             <constraint firstItem="7iO-IK-1xB" firstAttribute="leading" secondItem="aBc-Zh-8RU" secondAttribute="leading" constant="20" id="9ha-8i-5ad"/>
                             <constraint firstItem="aBc-Zh-8RU" firstAttribute="trailing" secondItem="7iO-IK-1xB" secondAttribute="trailing" constant="20" id="HDU-cN-BJ3"/>
-                            <constraint firstItem="6OW-EV-2Ip" firstAttribute="top" secondItem="7iO-IK-1xB" secondAttribute="bottom" constant="20" id="Wjp-3a-pnP"/>
-                            <constraint firstItem="6OW-EV-2Ip" firstAttribute="leading" secondItem="aBc-Zh-8RU" secondAttribute="leading" constant="176" id="bsh-YQ-RuE"/>
+                            <constraint firstItem="aBc-Zh-8RU" firstAttribute="trailing" secondItem="6OW-EV-2Ip" secondAttribute="trailing" constant="165" id="JIS-LM-wbL"/>
                             <constraint firstItem="7iO-IK-1xB" firstAttribute="top" secondItem="aBc-Zh-8RU" secondAttribute="top" constant="120" id="dK4-sb-soA"/>
-                            <constraint firstItem="aBc-Zh-8RU" firstAttribute="trailing" secondItem="6OW-EV-2Ip" secondAttribute="trailing" constant="175" id="sfC-O7-2rG"/>
+                            <constraint firstItem="6OW-EV-2Ip" firstAttribute="leading" secondItem="aBc-Zh-8RU" secondAttribute="leading" constant="165" id="pCr-fl-idJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aBc-Zh-8RU"/>
                     </view>
@@ -89,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3p-wF-0nH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1932" y="472"/>
+            <point key="canvasLocation" x="1931.8840579710147" y="471.42857142857139"/>
         </scene>
         <!--Task List Table View Controller-->
         <scene sceneID="T5f-rB-8HS">
@@ -99,6 +102,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" id="kLn-b7-l5H" customClass="TaskCell" customModule="ToDoApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -136,31 +140,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-nN-QqS">
-                                <rect key="frame" x="151" y="258" width="113" height="30"/>
-                                <state key="normal" title="Save edited task"/>
-                                <connections>
-                                    <action selector="saveEditButton:" destination="fa2-Ia-LeD" eventType="touchUpInside" id="ceI-f9-6Wu"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn8-GE-anW">
-                                <rect key="frame" x="357" y="108" width="37" height="30"/>
+                                <rect key="frame" x="347" y="108" width="47" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="checkButton:" destination="fa2-Ia-LeD" eventType="touchUpInside" id="AAS-ZZ-ASA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-nN-QqS">
+                                <rect key="frame" x="136" y="268" width="143" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save edited task"/>
+                                <connections>
+                                    <action selector="saveEditButton:" destination="fa2-Ia-LeD" eventType="touchUpInside" id="ceI-f9-6Wu"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zof-nH-Kb5" firstAttribute="leading" secondItem="5bo-uf-z0J" secondAttribute="leading" constant="20" id="92o-Lh-JDB"/>
                             <constraint firstItem="Gn8-GE-anW" firstAttribute="top" secondItem="5bo-uf-z0J" secondAttribute="top" constant="20" id="ASy-AM-j0K"/>
-                            <constraint firstItem="5bo-uf-z0J" firstAttribute="trailing" secondItem="eVu-nN-QqS" secondAttribute="trailing" constant="150" id="Mj9-Cb-4aw"/>
+                            <constraint firstItem="eVu-nN-QqS" firstAttribute="top" secondItem="zof-nH-Kb5" secondAttribute="bottom" constant="30" id="KNq-2i-IdI"/>
                             <constraint firstItem="5bo-uf-z0J" firstAttribute="trailing" secondItem="zof-nH-Kb5" secondAttribute="trailing" constant="20" id="cIC-29-QJr"/>
                             <constraint firstItem="5bo-uf-z0J" firstAttribute="trailing" secondItem="Gn8-GE-anW" secondAttribute="trailing" constant="20" id="eFm-pU-y4L"/>
-                            <constraint firstItem="eVu-nN-QqS" firstAttribute="leading" secondItem="5bo-uf-z0J" secondAttribute="leading" constant="151" id="fcA-OS-Rsy"/>
+                            <constraint firstItem="eVu-nN-QqS" firstAttribute="leading" secondItem="5bo-uf-z0J" secondAttribute="leading" constant="136" id="kyN-Ub-61B"/>
                             <constraint firstItem="zof-nH-Kb5" firstAttribute="top" secondItem="5bo-uf-z0J" secondAttribute="top" constant="120" id="spq-UQ-UaW"/>
-                            <constraint firstItem="eVu-nN-QqS" firstAttribute="top" secondItem="zof-nH-Kb5" secondAttribute="bottom" constant="20" id="uGO-O1-uZQ"/>
+                            <constraint firstItem="5bo-uf-z0J" firstAttribute="trailing" secondItem="eVu-nN-QqS" secondAttribute="trailing" constant="135" id="vV1-Bt-xvb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5bo-uf-z0J"/>
                     </view>
