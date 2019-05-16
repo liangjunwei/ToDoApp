@@ -23,7 +23,7 @@ class TaskCreationViewController: UIViewController {
                 return
         }
         
-        let newTask = Task(task: todoTask)
+        let newTask = Task(task: todoTask, check: false)
         taskStorage.insert(task: newTask)
         
         print(taskStorage.taskArray[0].task)

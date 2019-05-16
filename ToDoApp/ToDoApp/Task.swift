@@ -10,8 +10,10 @@ import UIKit
 
 class Task: Codable {
     var task: String
+    var check: Bool
     
-    init(task: String) {
+    init(task: String, check: Bool) {
         self.task = task
+        self.check = check
     }
 }

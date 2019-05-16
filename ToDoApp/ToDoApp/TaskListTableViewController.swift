@@ -8,6 +8,7 @@
 
 import UIKit
 
+var taskIndex = 0
 var taskStorage: TaskStoring = TaskStorage.shared
 
 class TaskListTableViewController: UITableViewController {
@@ -45,7 +46,11 @@ class TaskListTableViewController: UITableViewController {
                 return UITableViewCell()
         }
         cell.textLabel?.text = taskStorage.taskArray[indexPath.row].task
-        print("something")
+        
+        if taskStorage.taskArray[indexPath.row].check {
+            cell.textLabel?.textColor = UIColor.green
+        }
+        
         return cell
     }
     
@@ -53,18 +58,20 @@ class TaskListTableViewController: UITableViewController {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             taskStorage.taskArray.remove(at: indexPath.row)
         }
-        
+
         let encoder = JSONEncoder()
-        
+
         if let taskData = try? encoder.encode(taskStorage.taskArray) {
             self.store.set(taskData, forKey: "tasks")
         }
-        
+
         tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("task row: \(indexPath.row)")
+        taskIndex = indexPath.row
+        performSegue(withIdentifier: "editTask", sender: self)
     }
     
 }

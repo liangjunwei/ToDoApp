@@ -114,21 +114,59 @@
                             <outlet property="delegate" destination="RwF-8V-lm7" id="dKg-D8-bqX"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="fa2-Ia-LeD" kind="show" identifier="editTask" id="zhT-bm-5yd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gva-cy-ehP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1897" y="-250"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Task-->
         <scene sceneID="OlK-wT-fER">
             <objects>
-                <viewController id="fa2-Ia-LeD" sceneMemberID="viewController">
+                <viewController id="fa2-Ia-LeD" customClass="EditTask" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCP-2F-O4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zof-nH-Kb5">
+                                <rect key="frame" x="20" y="208" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVu-nN-QqS">
+                                <rect key="frame" x="151" y="258" width="113" height="30"/>
+                                <state key="normal" title="Save edited task"/>
+                                <connections>
+                                    <action selector="saveEditButton:" destination="fa2-Ia-LeD" eventType="touchUpInside" id="ceI-f9-6Wu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn8-GE-anW">
+                                <rect key="frame" x="357" y="108" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="checkButton:" destination="fa2-Ia-LeD" eventType="touchUpInside" id="AAS-ZZ-ASA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zof-nH-Kb5" firstAttribute="leading" secondItem="5bo-uf-z0J" secondAttribute="leading" constant="20" id="92o-Lh-JDB"/>
+                            <constraint firstItem="Gn8-GE-anW" firstAttribute="top" secondItem="5bo-uf-z0J" secondAttribute="top" constant="20" id="ASy-AM-j0K"/>
+                            <constraint firstItem="5bo-uf-z0J" firstAttribute="trailing" secondItem="eVu-nN-QqS" secondAttribute="trailing" constant="150" id="Mj9-Cb-4aw"/>
+                            <constraint firstItem="5bo-uf-z0J" firstAttribute="trailing" secondItem="zof-nH-Kb5" secondAttribute="trailing" constant="20" id="cIC-29-QJr"/>
+                            <constraint firstItem="5bo-uf-z0J" firstAttribute="trailing" secondItem="Gn8-GE-anW" secondAttribute="trailing" constant="20" id="eFm-pU-y4L"/>
+                            <constraint firstItem="eVu-nN-QqS" firstAttribute="leading" secondItem="5bo-uf-z0J" secondAttribute="leading" constant="151" id="fcA-OS-Rsy"/>
+                            <constraint firstItem="zof-nH-Kb5" firstAttribute="top" secondItem="5bo-uf-z0J" secondAttribute="top" constant="120" id="spq-UQ-UaW"/>
+                            <constraint firstItem="eVu-nN-QqS" firstAttribute="top" secondItem="zof-nH-Kb5" secondAttribute="bottom" constant="20" id="uGO-O1-uZQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5bo-uf-z0J"/>
                     </view>
+                    <connections>
+                        <outlet property="taskText" destination="zof-nH-Kb5" id="cvW-5I-Y6Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQB-dz-XSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

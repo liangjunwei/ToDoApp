@@ -18,6 +18,7 @@
 		DF9C5D6D228DDEA70035296A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9C5D6C228DDEA70035296A /* Task.swift */; };
 		DF9C5D6F228DDECF0035296A /* TaskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9C5D6E228DDECF0035296A /* TaskStorage.swift */; };
 		DF9C5D71228DDEE40035296A /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9C5D70228DDEE40035296A /* TaskCell.swift */; };
+		DF9C5D73228DEFB70035296A /* EditTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9C5D72228DEFB70035296A /* EditTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		DF9C5D6C228DDEA70035296A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		DF9C5D6E228DDECF0035296A /* TaskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStorage.swift; sourceTree = "<group>"; };
 		DF9C5D70228DDEE40035296A /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		DF9C5D72228DEFB70035296A /* EditTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				DF9C5D6A228DDC4F0035296A /* TaskListTableViewController.swift */,
 				DF9C5D6E228DDECF0035296A /* TaskStorage.swift */,
 				DF63B3A0228D0AF700522E43 /* LaunchScreen.storyboard */,
+				DF9C5D72228DEFB70035296A /* EditTask.swift */,
 				DF9C5D6C228DDEA70035296A /* Task.swift */,
 				DF9C5D70228DDEE40035296A /* TaskCell.swift */,
 				DF63B3A3228D0AF700522E43 /* Info.plist */,
@@ -214,6 +217,7 @@
 			files = (
 				DF63B39A228D0AF300522E43 /* MainAppViewController.swift in Sources */,
 				DF9C5D71228DDEE40035296A /* TaskCell.swift in Sources */,
+				DF9C5D73228DEFB70035296A /* EditTask.swift in Sources */,
 				DF9C5D69228DDBCF0035296A /* TaskCreationViewController.swift in Sources */,
 				DF9C5D6F228DDECF0035296A /* TaskStorage.swift in Sources */,
 				DF9C5D6D228DDEA70035296A /* Task.swift in Sources */,
