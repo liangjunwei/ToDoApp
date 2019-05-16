@@ -10,14 +10,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main App View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainAppViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3X0-ZG-APc">
+                                <rect key="frame" x="144" y="176" width="127" height="30"/>
+                                <state key="normal" title="View My ToDo List"/>
+                                <connections>
+                                    <segue destination="RwF-8V-lm7" kind="show" id="Cm3-jA-Fm1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btk-oF-giu">
+                                <rect key="frame" x="139" y="236" width="137" height="30"/>
+                                <state key="normal" title="Add Task To My List"/>
+                                <connections>
+                                    <segue destination="cR0-nT-4C9" kind="presentation" id="uID-g9-UbN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="btk-oF-giu" secondAttribute="trailing" constant="138" id="24w-rY-jNk"/>
+                            <constraint firstItem="3X0-ZG-APc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="RcS-my-e6W"/>
+                            <constraint firstItem="3X0-ZG-APc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="Rmj-ny-RKz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3X0-ZG-APc" secondAttribute="trailing" constant="143" id="dzT-K1-gYX"/>
+                            <constraint firstItem="btk-oF-giu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="wtL-Fv-U2d"/>
+                            <constraint firstItem="btk-oF-giu" firstAttribute="top" secondItem="3X0-ZG-APc" secondAttribute="bottom" constant="30" id="x1F-nm-bDS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="nol-zx-iH1"/>
@@ -26,31 +50,57 @@
             </objects>
             <point key="canvasLocation" x="1137.68115942029" y="103.79464285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Task Creation View Controller-->
         <scene sceneID="jhh-NS-4Io">
             <objects>
-                <viewController id="cR0-nT-4C9" sceneMemberID="viewController">
+                <viewController id="cR0-nT-4C9" customClass="TaskCreationViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hr2-P9-BIh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7iO-IK-1xB">
+                                <rect key="frame" x="20" y="164" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OW-EV-2Ip">
+                                <rect key="frame" x="176" y="214" width="63" height="30"/>
+                                <state key="normal" title="Add Task"/>
+                                <connections>
+                                    <action selector="createTask:" destination="cR0-nT-4C9" eventType="touchUpInside" id="PUl-gT-Zkx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7iO-IK-1xB" firstAttribute="leading" secondItem="aBc-Zh-8RU" secondAttribute="leading" constant="20" id="9ha-8i-5ad"/>
+                            <constraint firstItem="aBc-Zh-8RU" firstAttribute="trailing" secondItem="7iO-IK-1xB" secondAttribute="trailing" constant="20" id="HDU-cN-BJ3"/>
+                            <constraint firstItem="6OW-EV-2Ip" firstAttribute="top" secondItem="7iO-IK-1xB" secondAttribute="bottom" constant="20" id="Wjp-3a-pnP"/>
+                            <constraint firstItem="6OW-EV-2Ip" firstAttribute="leading" secondItem="aBc-Zh-8RU" secondAttribute="leading" constant="176" id="bsh-YQ-RuE"/>
+                            <constraint firstItem="7iO-IK-1xB" firstAttribute="top" secondItem="aBc-Zh-8RU" secondAttribute="top" constant="120" id="dK4-sb-soA"/>
+                            <constraint firstItem="aBc-Zh-8RU" firstAttribute="trailing" secondItem="6OW-EV-2Ip" secondAttribute="trailing" constant="175" id="sfC-O7-2rG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aBc-Zh-8RU"/>
                     </view>
+                    <connections>
+                        <outlet property="task" destination="7iO-IK-1xB" id="ban-ie-kGM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3p-wF-0nH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1932" y="472"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Task List Table View Controller-->
         <scene sceneID="T5f-rB-8HS">
             <objects>
-                <tableViewController id="RwF-8V-lm7" sceneMemberID="viewController">
+                <tableViewController id="RwF-8V-lm7" customClass="TaskListTableViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MGb-F9-Ps2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kLn-b7-l5H">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" id="kLn-b7-l5H" customClass="TaskCell" customModule="ToDoApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kLn-b7-l5H" id="p7d-Wd-6NW">
